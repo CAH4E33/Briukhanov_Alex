@@ -51,7 +51,7 @@ public class Calc {
      * @param x Число для перетворення.
      * @return Рядок, що містить двійкове представлення числа.
      */
-    private String toBinaryString(int x) {
+    protected String toBinaryString(int x) {
 
         return Integer.toBinaryString(x);
     }
@@ -62,7 +62,7 @@ public class Calc {
      * @param x Число для перетворення.
      * @return Рядок, що містить двійкове представлення числа.
      */
-    private String toOctalString(int x) {
+    protected String toOctalString(int x) {
         return Integer.toOctalString(x);
     }
 
@@ -72,7 +72,7 @@ public class Calc {
      * @param x Число для перетворення.
      * @return Рядок, що містить двійкове представлення числа.
      */
-    private String toHexString(int x) {
+    protected String toHexString(int x) {
         return Integer.toHexString(x);
     }
 
@@ -83,6 +83,11 @@ public class Calc {
 
         System.out.println(result.getValue());
     }
+
+    public Result getResult() {
+        return result;
+    }
+
 
     /**
      * Зберігає результат обчислень в файл.

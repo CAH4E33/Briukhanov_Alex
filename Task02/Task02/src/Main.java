@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class Main {
     /** Об'єкт класу {@linkplain Calc}.<br>Вирішує задачу інд. завдання. */
-    private Calc calc = new Calc();
+    private final Calc calc = new Calc();
     /**
      * Метод для відображення головного меню та взаємодії з користувачем.
      */
