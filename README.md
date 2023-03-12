@@ -29,7 +29,7 @@
 
 ### Результат виконання програми
 <img src="https://github.com/CAH4E33/Briukhanov_Alex/blob/master/Task03/Images/ResultTask03.png" width="100%"/>
-<img src="https://github.com/CAH4E33/Briukhanov_Alex/blob/master/Task03/Images/ResultTask03.png" width="100%"/>
+<img src="https://github.com/CAH4E33/Briukhanov_Alex/blob/master/Task03/Images/ResultTask032.png" width="100%"/>
 
 ### Результат тестування програми
 <img src="https://github.com/CAH4E33/Briukhanov_Alex/blob/master/Task03/Images/TestTask03.png" width="100%"/>
