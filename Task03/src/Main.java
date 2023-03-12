@@ -9,8 +9,12 @@ import java.util.Scanner;
  * @see Main#main
  */
 public class Main {
-    /** Об'єкт класу {@linkplain Calc}.<br>Вирішує задачу інд. завдання. */
-    private final Calc calc = new Calc();
+
+    private View view;
+
+    public Main(View view) {
+        this.view = view;
+    }
     /**
      * Метод для відображення головного меню та взаємодії з користувачем.
      */
@@ -32,42 +36,40 @@ public class Main {
                 case 'q' -> System.out.println("Exit.");
                 case 'v' -> {
                     System.out.println("View current.");
-                    calc.show();
+                    view.viewShow();
                 }
                 case 'g' -> {
-                    Scanner scanner = new Scanner(System.in);
+                  Scanner scanner = new Scanner(System.in);
+                  System.out.print("Введіть ціле число: ");
+                  int num = scanner.nextInt();
 
-                    System.out.print("Введіть ціле число: ");
-                    int num = scanner.nextInt();
-                    calc.SetDig(num);
+                  System.out.println("Выберіть тип представлення: ");
+                  System.out.println("1 - Двійкове");
+                  System.out.println("2 - Вісімкове");
+                  System.out.println("3 - Шістнадцяткове");
 
-                    System.out.println("Выберіть тип представлення: ");
-                    System.out.println("1 - Двійкове");
-                    System.out.println("2 - Вісімкове");
-                    System.out.println("3 - Шістнадцяткове");
-                    int choice = scanner.nextInt();
-
-                    calc.Choice(choice);
-                    calc.show();
+                  int choice = scanner.nextInt();
+                  view.viewInit(choice,num);
+                  view.viewShow();
                 }
                 case 's' -> {
                     System.out.println("Save current.");
                     try {
-                        calc.save();
+                        view.viewSave();
                     } catch (IOException e) {
                         System.out.println("Serialization error: " + e);
                     }
-                    calc.show();
+                    view.viewShow();
                 }
                 case 'r' -> {
                     System.out.println("Restore last saved.");
                     try {
-                        calc.restore();
+                        view.viewRestore();
                     } catch (Exception e) {
 
                         System.out.println("Serialization error: " + e);
                     }
-                    calc.show();
+                    view.viewShow();
                 }
                 default -> System.out.print("Wrong command. ");
             }
@@ -79,7 +81,7 @@ public class Main {
      * @param args – параметри запуску програми.
      */
     public static void main(String[] args) {
-        Main main = new Main();
+        Main main = new Main(new ViewableResult().getView());
         main.menu();
     }
 }

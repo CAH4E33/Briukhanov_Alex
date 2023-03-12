@@ -5,10 +5,13 @@ import java.io.Serializable;
  * Реалізує інтерфейс Serializable для можливості збереження об'єктів в файл.
  */
 public class Result implements Serializable {
+
     /**
      * Значення результату.
      */
     private String value;
+    private int argument;
+    private int choice;
 
     /**
      * Конструктор за замовчуванням, що ініціалізує значення результату пустим рядком.
@@ -22,17 +25,31 @@ public class Result implements Serializable {
      *
      * @return Значення результату.
      */
+
     public String getValue() {
-        return value;
+        return String.format("Argument %d: %s (%s)", argument, value, getChoiceName());
+    }
+
+    private String getChoiceName() {
+        return switch (choice) {
+            case 1 -> "binary";
+            case 2 -> "octal";
+            case 3 -> "hexadecimal";
+            default -> "unknown";
+        };
     }
 
     /**
      * Метод, що встановлює значення результату.
      *
-     * @param value Нове значення результату.
+     * @param value  Нове значення аргументу.
+     * @param argument  Вихідний аргумент
+     * @param choice Тип перетворення
      */
-    public void setValue(String value) {
+    public void setValue(String value, int argument, int choice) {
         this.value = value;
+        this.argument = argument;
+        this.choice = choice;
     }
 
 }

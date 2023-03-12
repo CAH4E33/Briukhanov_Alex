@@ -12,17 +12,17 @@ import java.io.IOException;
  */
 public interface View {
     /** Отображает заголовок */
-    public void viewHeader();
+    void viewHeader();
     /** Отображает основную часть */
-    public void viewBody();
+    void viewBody();
     /** Отображает окончание */
-    public void viewFooter();
+    void viewFooter();
     /** Отображает объект целиком */
-    public void viewShow();
+    void viewShow();
     /** Выполняет инициализацию */
-    public void viewInit();
+    void viewInit(int choice,int num);
     /** Сохраняет данные для последующего восстановления */
-    public void viewSave() throws IOException;
+    void viewSave() throws IOException;
     /** Восстанавливает ранее сохранённые данные */
-    public void viewRestore() throws Exception;
+    void viewRestore() throws Exception;
 }
