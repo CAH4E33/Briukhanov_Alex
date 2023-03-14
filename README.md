@@ -3,6 +3,7 @@
 * [Task 02](#Task02)
 * [Task 03](#Task03)
 * [Task 04](#Task04)
+* [Task 05](#Task05)
 
 ## Task01
 
@@ -31,8 +32,23 @@
 <img src="https://github.com/CAH4E33/Briukhanov_Alex/blob/master/Task03/Images/ResultTask03.png" width="100%"/>
 <img src="https://github.com/CAH4E33/Briukhanov_Alex/blob/master/Task03/Images/ResultTask032.png" width="100%"/>
 
+
 ### Результат тестування програми
 <img src="https://github.com/CAH4E33/Briukhanov_Alex/blob/master/Task03/Images/TestTask03.png" width="100%"/>
 
 ## Task04
+### Завдання:
+*За основу використовувати вихідний текст проекту попередньої лабораторної роботи Використовуючи шаблон проектування Factory Method
+(Virtual Constructor), розширити ієрархію похідними класами, реалізують методи для подання результатів у вигляді текстової
+таблиці. Параметри відображення таблиці мають визначатися користувачем.
+Продемонструвати заміщення (перевизначення, overriding), поєднання (перевантаження, overloading), динамічне призначення методів
+(Пізнє зв'язування, поліморфізм, dynamic method dispatch).*
+
+### Результат виконання програми
+<img src="https://github.com/CAH4E33/Briukhanov_Alex/blob/master/Task04/Images/ResultTask04.png" width="100%"/>
+
+### Результат тестування програми
+<img src="https://github.com/CAH4E33/Briukhanov_Alex/blob/master/Task04/Images/TestTask04.png" width="100%"/>
+
+## Task05
 ### Soon...
