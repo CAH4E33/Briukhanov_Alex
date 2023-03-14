@@ -1,3 +1,5 @@
+package ex02;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -33,8 +35,12 @@ public class ViewResult implements View {
      */
     private ArrayList<Result> items = new ArrayList<Result>();
 
+    public void setItems(ArrayList<Result> items) {
+        this.items = items;
+    }
+
     /**
-     * Вызывает {@linkplain ViewResult#ViewResult(int n) ViewResult(int n)}
+     * Вызывает {@linkplain ViewResult#ViewResult(int n) ex02.ViewResult(int n)}
      * с параметром {@linkplain ViewResult#DEFAULT_NUM DEFAULT_NUM}
      */
     public ViewResult() {
@@ -60,6 +66,7 @@ public class ViewResult implements View {
     public ArrayList<Result> getItems() {
         return items;
     }
+
 
     /**
      * Вычисляет значение функции

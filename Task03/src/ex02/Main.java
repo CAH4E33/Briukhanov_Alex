@@ -1,9 +1,14 @@
+package ex02;
+
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
-/** Обчислення та відображення результатів.
+
+/**
+ * Обчислення та відображення результатів.
  * Містить реалізацію статичного методу main().
+ *
  * @author xone
  * @version 1.0
  * @see Main#main
@@ -15,10 +20,11 @@ public class Main {
     public Main(View view) {
         this.view = view;
     }
+
     /**
      * Метод для відображення головного меню та взаємодії з користувачем.
      */
-    private void menu() {
+    protected void menu() {
         String s = null;
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         do {
@@ -27,7 +33,7 @@ public class Main {
                 System.out.print("'q'uit, 'v'iew, 'g'enerate, 's'ave, 'r'estore: ");
                 try {
                     s = in.readLine();
-                } catch(IOException e) {
+                } catch (IOException e) {
                     System.out.println("Error: " + e);
                     System.exit(0);
                 }
@@ -35,22 +41,45 @@ public class Main {
             switch (s.charAt(0)) {
                 case 'q' -> System.out.println("Exit.");
                 case 'v' -> {
-                    System.out.println("View current.");
+                    System.out.println("ex02.View current.");
                     view.viewShow();
                 }
                 case 'g' -> {
-                  Scanner scanner = new Scanner(System.in);
-                  System.out.print("Введіть ціле число: ");
-                  int num = scanner.nextInt();
+                    Scanner scanner = new Scanner(System.in);
+                    int num;
+                    while (true) {
+                        System.out.print("Введіть ціле число: ");
 
-                  System.out.println("Выберіть тип представлення: ");
-                  System.out.println("1 - Двійкове");
-                  System.out.println("2 - Вісімкове");
-                  System.out.println("3 - Шістнадцяткове");
+                        if (scanner.hasNextInt()) {
+                            num = scanner.nextInt();
+                            break;
+                        } else {
+                            System.out.println("Введено невірне значення. Спробуйте ще раз.");
+                            scanner.next();
+                        }
+                    }
 
-                  int choice = scanner.nextInt();
-                  view.viewInit(choice,num);
-                  view.viewShow();
+                    int choice;
+                    while (true) {
+                        System.out.println("Выберіть тип представлення: ");
+                        System.out.println("1 - Двійкове");
+                        System.out.println("2 - Вісімкове");
+                        System.out.println("3 - Шістнадцяткове");
+
+                        if (scanner.hasNextInt()) {
+                            choice = scanner.nextInt();
+                            if (choice >= 1 && choice <= 3) {
+                                break;
+                            } else {
+                                System.out.println("Введено некорректное значение. Попробуйте еще раз.");
+                            }
+                        } else {
+                            System.out.println("Введено невірне значення. Спробуйте ще раз.");
+                            scanner.next();
+                        }
+                    }
+                    view.viewInit(choice, num);
+                    view.viewShow();
                 }
                 case 's' -> {
                     System.out.println("Save current.");
@@ -73,11 +102,14 @@ public class Main {
                 }
                 default -> System.out.print("Wrong command. ");
             }
-        } while(s.charAt(0) != 'q');
+        } while (s.charAt(0) != 'q');
     }
-    /** Виконується під час запуску програми.
+
+    /**
+     * Виконується під час запуску програми.
      * Обчислюється значення функції для різних аргументів.
      * Результати обчислень відображаються на екрані.
+     *
      * @param args – параметри запуску програми.
      */
     public static void main(String[] args) {

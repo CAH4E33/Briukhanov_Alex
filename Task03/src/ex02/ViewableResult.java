@@ -1,3 +1,4 @@
+package ex02;
 
 /** ConcreteCreator
  * (шаблон проектирования

@@ -1,3 +1,5 @@
+import ex02.Result;
+import ex02.ViewResult;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

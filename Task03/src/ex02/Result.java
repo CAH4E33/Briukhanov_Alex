@@ -1,3 +1,5 @@
+package ex02;
+
 import java.io.Serializable;
 
 /**
@@ -27,8 +29,26 @@ public class Result implements Serializable {
      */
 
     public String getValue() {
+
         return String.format("Argument %d: %s (%s)", argument, value, getChoiceName());
     }
+
+    public String getArg(){
+        return String.format("%s", argument);
+
+    }
+
+    public String getVal(){
+        return  String.format("%s", value);
+
+    }
+
+    public String getChoice(){
+        return  String.format("%s", getChoiceName());
+
+    }
+
+
 
     private String getChoiceName() {
         return switch (choice) {

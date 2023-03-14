@@ -1,3 +1,4 @@
+package ex02;
 
 /** Creator
  * (шаблон проектирования
@@ -10,5 +11,5 @@
  */
 public interface Viewable {
     /** Создаёт объект, реализующий {@linkplain View} */
-    public View getView();
+     View getView();
 }
