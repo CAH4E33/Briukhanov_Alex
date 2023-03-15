@@ -8,6 +8,10 @@ import java.io.Serializable;
  */
 public class Result implements Serializable {
 
+    public void setArg(int argument) {
+        this.argument = argument;
+    }
+
     /**
      * Значення результату.
      */
@@ -20,6 +24,12 @@ public class Result implements Serializable {
      */
     public Result() {
         value = "";
+    }
+
+    public void setValue(String value, int input, int choice) {
+        this.value = value;
+        this.argument = input;
+        this.choice = choice;
     }
 
     /**
@@ -38,6 +48,11 @@ public class Result implements Serializable {
 
     }
 
+    public int getArgInt(){
+        return  argument;
+
+    }
+
     public String getVal(){
         return  String.format("%s", value);
 
@@ -45,6 +60,12 @@ public class Result implements Serializable {
 
     public String getChoice(){
         return  String.format("%s", getChoiceName());
+
+    }
+
+
+    public int getValInt(){
+        return  Integer.parseInt(value);
 
     }
 
@@ -62,14 +83,11 @@ public class Result implements Serializable {
     /**
      * Метод, що встановлює значення результату.
      *
-     * @param value  Нове значення аргументу.
-     * @param argument  Вихідний аргумент
-     * @param choice Тип перетворення
+     * @param argument Вихідний аргумент
      */
-    public void setValue(String value, int argument, int choice) {
-        this.value = value;
-        this.argument = argument;
-        this.choice = choice;
+    public void setVal(int argument) {
+        this.value = String.valueOf(argument);
+
     }
 
 }
