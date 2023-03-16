@@ -77,3 +77,6 @@
 
 ### Результат тестування програми
 <img src="https://github.com/CAH4E33/Briukhanov_Alex/blob/master/Task06/Images/TestTask06.png" width="100%"/>
+
+---
+📝Практика виконувалась в середовищі [IntelliJ IDEA](https://www.jetbrains.com/idea/)
