@@ -1,10 +1,10 @@
 # 🗂️Брюханов Олександр 35 група📂
-* [Task 01](#Task01)
-* [Task 02](#Task02)
-* [Task 03](#Task03)
-* [Task 04](#Task04)
-* [Task 05](#Task05)
-* [Task 06](#Task06)
+* 📁[Task 01](#Task01)
+* 📁[Task 02](#Task02)
+* 📁[Task 03](#Task03)
+* 📁[Task 04](#Task04)
+* 📁[Task 05](#Task05)
+* 📁[Task 06](#Task06)
 
 ## 📘Task01
 
