@@ -67,4 +67,13 @@
 <img src="https://github.com/CAH4E33/Briukhanov_Alex/blob/master/Task05/Images/TestTask05.png" width="100%"/>
 
 ## 📘Task06
-### Soon...
+### Завдання:
+* Продемонструвати можливість паралельної обробки елементів колекції (пошук мінімуму, максимуму, обчислення середнього значення, відбір за критерієм, статистична обробка тощо).
+* Управління чергою завдань (команд) реалізувати за допомогою шаблону Worker Thread.
+
+### Результат виконання програми
+<img src="https://github.com/CAH4E33/Briukhanov_Alex/blob/master/Task06/Images/ResultTask06.png" width="100%"/>
+<img src="https://github.com/CAH4E33/Briukhanov_Alex/blob/master/Task06/Images/ResultTask062.png" width="100%"/>
+
+### Результат тестування програми
+<img src="https://github.com/CAH4E33/Briukhanov_Alex/blob/master/Task06/Images/TestTask06.png" width="100%"/>
